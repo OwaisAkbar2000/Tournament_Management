@@ -12,6 +12,7 @@ namespace Tournament_Scheduling.Controllers
     public class CricketController : Controller
     {
         TSContext db = new TSContext();
+        
         // GET: Cricket
         public List<Match> RoundRobinFixtures(List<Venue> venues, List<Team> teams, DateTime startDate, DateTime endDate)
         {
@@ -132,7 +133,10 @@ namespace Tournament_Scheduling.Controllers
 
             return randomList;
         }
-
+        public ActionResult Welcome()
+        {
+            return View();
+        }
         public ActionResult Index()
         {
             var events = db.Events.ToList();

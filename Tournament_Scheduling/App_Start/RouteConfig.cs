@@ -16,7 +16,7 @@ namespace Tournament_Scheduling
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "Cricket", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "Cricket", action = "Welcome", id = UrlParameter.Optional }
             );
         }
     }
